@@ -24,15 +24,35 @@ public class Turismo extends DePasajeros {
     }
 
     public double calculaCostoServicio(double km){
-        double aumentoCama = 0, aumentoBar = 0;
+        double aumento = 0;
         if(serviBar)
-            aumentoCama = (5/100);
+            aumento += (5/100);
         if(asientoCama)
-            aumentoBar = (5/100);
+            aumento += (5/100);
         
-        return (super.calculaCostoServicio(km) ) + (super.calculaCostoServicio(km) * aumentoBar) + ( super.calculaCostoServicio(km) * aumentoCama);
+        return (super.calculaCostoServicio(km) ) + (super.calculaCostoServicio(km) * aumento);
     }
 
+    public boolean getAsientoCama() {
+        return asientoCama;
+    }
+
+    public void setAsientoCama(boolean asientoCama) {
+        this.asientoCama = asientoCama;
+    }
+
+    public boolean getServiBar() {
+        return serviBar;
+    }
+
+    public void setServiBar(boolean serviBar) {
+        this.serviBar = serviBar;
+    }
+
+    
+    
+    
+    
 public String toString() {
         String asiCa="", bar="";     
         if (asientoCama)
@@ -40,7 +60,8 @@ public String toString() {
         else asiCa="no";
         if(serviBar)
             bar="Si";
-        else bar="No";          
+        else bar="No";
+        
         return super.toString() + " y  " + asiCa + " cuenta con asientos tipo cama. "+ bar+" tiene servicio de Bar";
     }
 

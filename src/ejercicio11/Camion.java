@@ -30,40 +30,19 @@ public abstract class Camion {
     public String getMarca() {
         return marca;
     }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
     public String getNumMotor() {
         return numMotor;
     }
-
-    public void setNumMotor(String numMotor) {
-        this.numMotor = numMotor;
-    }
-
     public String getPlacas() {
         return placas;
     }
-
-    public void setPlacas(String placas) {
-        this.placas = placas;
-    }
-
     public double getCostoCamion() {
         return costoCamion;
     }
-
     public void setCostoCamion(double costoCamion) {
         this.costoCamion = costoCamion;
     }
 
-    
-    
-    
-    
-    
     public boolean equals(Object obj) {
         boolean res = false;
         if (obj != null && obj instanceof Camion) {

@@ -35,7 +35,7 @@ calcula como el 0.01% del costo del camión dividido entre el número de pasajer
 multiplicado por $250 y eso da el importe mensual que deberá abonar cada niño.*/
     
     public double calculaCostoServicio(){
-        return ( (this.getCostoCamion() * (0.01/100))/this.getTotalPasaj() ) * 250;       
+        return ( (this.getCostoCamion() * (0.01/100) )/this.getTotalPasaj() ) * 250;       
     }
 
     public String toString() {
